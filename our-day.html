@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Our Day | Family Day 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brown: #5d3527;
+            --deep: #3e2119;
+            --pink: #f7c8d4;
+            --cream: #fffaf6
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: var(--pink);
+            font-family: "DM Sans", sans-serif;
+            color: var(--brown)
+        }
+
+        .page {
+            width: min(1080px, calc(100% - 32px));
+            margin: 16px auto;
+            min-height: calc(100vh - 32px);
+            background: var(--cream);
+            border-radius: 30px;
+            padding: 29px 7%;
+            overflow: hidden
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .logo {
+            color: var(--brown);
+            text-decoration: none;
+            font: 800 21px "Playfair Display", serif
+        }
+
+        .logo span {
+            color: #d98a9d;
+            font-style: italic
+        }
+
+        .back {
+            color: #fff;
+            background: var(--brown);
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 99px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 4px #3b1d15
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 52px;
+            align-items: center;
+            padding: 70px 0
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            border: 1px solid #e9b9c5;
+            padding: 8px 12px;
+            border-radius: 99px;
+            background: #fff7f8
+        }
+
+        h1 {
+            font: 800 clamp(3rem, 7vw, 5.5rem)/.94 "Playfair Display", serif;
+            letter-spacing: -.06em;
+            margin: 18px 0;
+            color: var(--deep)
+        }
+
+        h1 em {
+            color: #c96f85
+        }
+
+        .copy {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #826159
+        }
+
+        .photo {
+            min-height: 390px;
+            border-radius: 42% 58% 49% 51% / 46% 43% 57% 54%;
+            background: linear-gradient(#f7c8d455, #f7c8d455), url('https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1000&q=85') center/cover
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #efd6d9;
+            border-radius: 20px;
+            padding: 21px
+        }
+
+        .card b {
+            display: block;
+            font: 700 20px "Playfair Display", serif;
+            color: var(--deep);
+            margin-bottom: 7px
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 13px;
+            line-height: 1.5;
+            color: #89675f
+        }
+
+        @media(max-width:650px) {
+            .page {
+                width: calc(100% - 20px);
+                margin: 10px auto;
+                padding: 23px 24px;
+                border-radius: 22px
+            }
+
+            .hero,
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .hero {
+                padding: 55px 0 35px;
+                gap: 32px
+            }
+
+            .photo {
+                min-height: 300px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <nav><a class="logo" href="index.html">family <span>day</span> 2026</a><a class="back" href="index.html">← Back
+                home</a></nav>
+        <main>
+            <section class="hero">
+                <div><span class="eyebrow">♡ Together is our favourite place</span>
+                    <h1>Our <em>day</em> to shine.</h1>
+                    <p class="copy">Family Day is all about slowing down and showing up for one another. It is a bright,
+                        happy space where every generation can play, share a meal, and make memories side by side.</p>
+                </div>
+                <div class="photo" role="img" aria-label="A happy family spending time together outdoors"></div>
+            </section>
+            <section class="cards">
+                <article class="card"><b>Connect</b>
+                    <p>Share stories, smiles, and the moments that bring us closer.</p>
+                </article>
+                <article class="card"><b>Celebrate</b>
+                    <p>Enjoy games, creativity, and a little joy for everyone.</p>
+                </article>
+                <article class="card"><b>Remember</b>
+                    <p>Take home new memories made with the people you love.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
