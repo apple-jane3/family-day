@@ -108,18 +108,15 @@
             color: #826159
         }
 
-        .details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px
-        }
-
-        .detail {
-            background: #fff;
-            border: 1px solid #efd6d9;
-            border-radius: 20px;
-            padding: 20px
-        }
+        .details { display:grid; grid-template-columns:repeat(4,1fr); gap:14px }
+        .detail { position:relative; overflow:hidden; display:block; background:#fff; border:1px solid #efd6d9; border-radius:20px; padding:20px; text-decoration:none; transition:transform .28s ease,box-shadow .28s ease,background .28s ease }
+        .detail:after { content:"↗"; position:absolute; right:16px; bottom:13px; color:#c57489; font-size:18px; opacity:0; transform:translate(-5px,5px); transition:.28s }
+        .detail:hover { transform:translateY(-8px) rotate(-1deg); background:#fff7f8; box-shadow:0 15px 25px #8e4e431c; animation-play-state:paused }
+        .detail:hover:after { opacity:1; transform:translate(0,0) }
+        .detail small { display:block; margin-top:11px; font-size:12px; color:#8f6e66 }
+        @keyframes float { 0%,100% { transform:translateY(0) } 50% { transform:translateY(-4px) } }
+        .detail:nth-child(even) { animation:float 3s ease-in-out infinite }
+        .detail:nth-child(3) { animation-delay:.7s }
 
         .detail b {
             display: block;
@@ -157,6 +154,8 @@
                 height: 290px
             }
         }
+
+        @media (max-width:850px) and (min-width:651px) { .details { grid-template-columns:repeat(2,1fr) } }
     </style>
 </head>
 
@@ -174,9 +173,10 @@
                 <div class="photo" role="img" aria-label="A family sharing a happy moment together"></div>
             </section>
             <section class="details">
-                <div class="detail"><b>When</b><span>Family Day 2026<br>9:00 AM – 2:00 PM</span></div>
-                <div class="detail"><b>Where</b><span>Community Garden<br>Celebration Hall</span></div>
-                <div class="detail"><b>What to bring</b><span>Your loved ones<br>&amp; a happy heart</span></div>
+                <a class="detail" href="family-dimension.html#when"><b>When</b><span>Family Day 2026<br>9:00 AM – 2:00 PM</span><small>Step into the celebration →</small></a>
+                <a class="detail" href="family-dimension.html#where"><b>Where</b><span>Community Garden<br>Celebration Hall</span><small>Explore the venue →</small></a>
+                <a class="detail" href="family-dimension.html#bring"><b>What to bring</b><span>Your loved ones<br>&amp; a happy heart</span><small>Get ready together →</small></a>
+                <a class="detail" href="family-dimension.html#memories"><b>Make memories</b><span>Games, photos<br>&amp; happy moments</span><small>Discover the fun →</small></a>
             </section>
         </main>
     </div>
